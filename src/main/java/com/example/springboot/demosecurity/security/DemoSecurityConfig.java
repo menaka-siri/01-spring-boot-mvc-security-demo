@@ -45,6 +45,8 @@ public class DemoSecurityConfig {
                                 .loginPage("/showMyLoginPage")
                                 .loginProcessingUrl("/authenticateTheUser")  //no controller is required, path is automatically handled by Spring
                                 .permitAll()
+                )
+                .logout(logout -> logout.permitAll()
                 );
 
         return http.build();

@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Spring MVC Security Demo</title>
 </head>
 <body>
-    <h2>Company Home Page</h2>
+<h2>Company Home Page</h2>
 <hr>
-Welcome to the company home page!
+<p>
+    Welcome to the company home page!
+</p>
+
+<form action="#" th:action="@{/logout}" method="POST">
+    <input type="submit" value="Logout" />
+</form>
+
 </body>
 </html>
